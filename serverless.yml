@@ -1,6 +1,7 @@
-COPYservice: notes-app-api
+# NOTE: update this with your service name
+service: serverless-stack-api
 
-# Create an optimized package for our functions
+# Create an optimized package for our functions 
 package:
   individually: true
 
@@ -13,7 +14,7 @@ provider:
   name: aws
   runtime: nodejs10.x
   stage: prod
-  region: us-east-1
+  region: eu-west-2
 
   # These environment variables are made available to our functions
   # under process.env.
@@ -32,7 +33,7 @@ provider:
         - dynamodb:PutItem
         - dynamodb:UpdateItem
         - dynamodb:DeleteItem
-      Resource: "arn:aws:dynamodb:us-east-1:*:*"
+      Resource: "arn:aws:dynamodb:eu-west-2:*:*"
 
 functions:
   # Defines an HTTP API endpoint that calls the main function in create.js
