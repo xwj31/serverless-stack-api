@@ -1,1 +1,4 @@
 .webpack
+# Env
+.env
+node_modules
